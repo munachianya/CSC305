@@ -35,7 +35,7 @@ pub fn main() {
     // `starting_index` is the first position in the slice.
     // `ending_index` is one more than the last position in the slice.
     println!("Borrow a section of the array as a slice.");
-    analyze_slice(&ys[1 .. 4]);
+    analyze_slice(&ys[1..4]);
 
     // Example of empty slice `&[]`:
     let empty_array: [u32; 0] = [];
@@ -46,7 +46,8 @@ pub fn main() {
     // `Option`. This can be matched as shown below, or used with
     // `.expect()` if you would like the program to exit with a nice
     // message instead of happily continue.
-    for i in 0..xs.len() + 1 { // Oops, one element too far!
+    for i in 0..xs.len() + 1 {
+        // Oops, one element too far!
         match xs.get(i) {
             Some(xval) => println!("{}: {}", i, xval),
             None => println!("Slow down! {} is too far!", i),
@@ -62,13 +63,17 @@ pub fn main() {
 pub fn multiplier(arr: &[f64]) -> f64 {
     let mut i = 0;
     let mut product: f64 = 1.0;
-    
+
     while i < arr.len() {
         product *= arr[i];
         i += 1;
     }
-    
-    product 
+    println!(
+        "this is the product of all the numbers in the array {}",
+        product
+    );
+
+    product
 }
 
 // Tuples can be used as function arguments and as return values.
@@ -85,10 +90,9 @@ struct Matrix(f32, f32, f32, f32);
 
 pub fn main1() {
     // A tuple with a bunch of different types.
-    let long_tuple = (1u8, 2u16, 3u32, 4u64,
-                      -1i8, -2i16, -3i32, -4i64,
-                      0.1f32, 0.2f64,
-                      'a', true);
+    let long_tuple = (
+        1u8, 2u16, 3u32, 4u64, -1i8, -2i16, -3i32, -4i64, 0.1f32, 0.2f64, 'a', true,
+    );
 
     // Values can be extracted from the tuple using tuple indexing.
     println!("Long tuple first value: {}", long_tuple.0);
