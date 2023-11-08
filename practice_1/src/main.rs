@@ -12,6 +12,7 @@ use greetings::french;*/
 use greeting::{english, french, igbo, spanish};
 fn main() {
     let number = [1, 2, 3, 4, 5, 6];
+    let numbers: [f64; 5] = [2.0, 3.0, 4.0, 5.0, 6.0];
     println!("This are Hello(s) \n");
     println!("Hello, world!");
     println!("English : {}", english::default_greeting());
@@ -31,4 +32,5 @@ fn main() {
     println!("\n");
     println!("This is Derived (User-Defined) \n");
     how_you_hold_data_for_operations::derived::user_defined::main();
+    how_you_hold_data_for_operations::primitive::compound::multiplier(&numbers);
 }

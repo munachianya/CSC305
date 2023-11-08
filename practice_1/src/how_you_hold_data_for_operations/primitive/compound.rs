@@ -59,6 +59,18 @@ pub fn main() {
     //println!("{}", xs[..][5]);
 }
 
+pub fn multiplier(arr: &[f64]) -> f64 {
+    let mut i = 0;
+    let mut product: f64 = 1.0;
+    
+    while i < arr.len() {
+        product *= arr[i];
+        i += 1;
+    }
+    
+    product 
+}
+
 // Tuples can be used as function arguments and as return values.
 fn reverse(pair: (i32, bool)) -> (bool, i32) {
     // `let` can be used to bind the members of a tuple to variables.
