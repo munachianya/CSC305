@@ -12,16 +12,23 @@ use greetings::french;*/
 use greeting::{english, french, igbo, spanish};
 fn main() {
     let number = [1, 2, 3, 4, 5, 6];
+    println!("This are Hello(s) \n");
     println!("Hello, world!");
     println!("English : {}", english::default_greeting());
     println!("Igbo : {}", igbo::default_greeting());
     println!("Spanish : {}", spanish::default_greeting());
     println!("French : {}", french::default_greeting());
-
+    println!("\n");
     //*calling the main function from scalar */
-    how_you_hold_data_for_operations::primitive::scalar::main();
+   
     
     //*calling the main and analyze_slice function from compound */
-    how_you_hold_data_for_operations::primitive::compound::analyze_slice(&number);
+    println!("This is Primitive (User-Defined) \n");
+    how_you_hold_data_for_operations::primitive::scalar::main();
+    how_you_hold_data_for_operations::primitive::compound::analyze_slice(&number);  
     how_you_hold_data_for_operations::primitive::compound::main();
+    how_you_hold_data_for_operations::primitive::compound::main1();
+    println!("\n");
+    println!("This is Derived (User-Defined) \n");
+    how_you_hold_data_for_operations::derived::user_defined::main();
 }
