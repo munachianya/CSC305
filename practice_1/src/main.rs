@@ -29,8 +29,14 @@ fn main() {
     how_you_hold_data_for_operations::primitive::compound::analyze_slice(&number);  
     how_you_hold_data_for_operations::primitive::compound::main();
     how_you_hold_data_for_operations::primitive::compound::main1();
+    how_you_hold_data_for_operations::primitive::compound::multiplier(&numbers);
     println!("\n");
     println!("This is Derived (User-Defined) \n");
-    how_you_hold_data_for_operations::derived::user_defined::main();
-    how_you_hold_data_for_operations::primitive::compound::multiplier(&numbers);
+    how_you_hold_data_for_operations::derived::user_defined::run();
+    how_you_hold_data_for_operations::derived::user_defined::run2();
+    how_you_hold_data_for_operations::derived::functions::run();
+    
+    println!("\n");
+    println!("This is Dr.Pius Assignment) \n");
+    how_you_hold_data_for_operations::derived::user_defined::run3();
 }
